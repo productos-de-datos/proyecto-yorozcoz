@@ -17,7 +17,7 @@ from luigi import Task, LocalTarget
 
 class ingestar_data(Task):
     def output(self):
-        return LocalTarget("data_lake/landing/arc.csv")
+        return LocalTarget("data_lake/landing/arc.txt")
 
     def run(self):
 
