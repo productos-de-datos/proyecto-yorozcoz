@@ -1,3 +1,5 @@
+import os  
+
 def create_data_lake():
     """
     Esta función crea la carpeta `data_lake` en la raiz del proyecto. El data lake resultado contiene
@@ -20,7 +22,6 @@ def create_data_lake():
 
 
     """
-    import os
     
     os.mkdir("./data_lake/")
     parent_dir = "data_lake/"
@@ -51,4 +52,4 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod()
     create_data_lake()
-    
+    test_create_data_lake()
