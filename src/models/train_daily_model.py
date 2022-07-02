@@ -22,7 +22,7 @@ def train_daily_model():
     
   
     X = pd.read_csv(
-        "data_lake/business/features/precios-diarios.csv", index_col=None, header=0
+        "data_lake/business/features/precios_diarios.csv", index_col=None, header=0
     ).values.tolist()
 
 

@@ -56,7 +56,7 @@ def make_features():
 
     make_features = pd.DataFrame(X)
 
-    make_features.to_csv("data_lake/business/features/precios-diarios.csv", index=None, header=True)
+    make_features.to_csv("data_lake/business/features/precios_diarios.csv", index=None, header=True)
 
     # raise NotImplementedError("Implementar esta función")
 

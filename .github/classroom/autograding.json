@@ -102,7 +102,7 @@
     },
     {
       "name": "Test 11",
-      "setup": "pip3 install matplotlib sklearn pandas pickle numpy luigi pytest pylint datetime",
+      "setup": "pip3 install matplotlib sklearn pandas numpy luigi pytest pylint datetime",
       "run": "python3 grader.py 11",
       "input": "",
       "output": "",
