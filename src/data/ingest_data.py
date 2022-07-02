@@ -2,15 +2,15 @@
 Módulo de ingestión de datos.
 -------------------------------------------------------------------------------
 
-Descarga desde el repositorio jdvelasq/datalabs/precio_bolsa_nacional/xls/ 
-los archivos de precios de bolsa nacional en formato xls a la capa landing del datalake.
+Este módulo contiene las funciones que descargan desde el repositorio jdvelasq/datalabs/precio_bolsa_nacional/xls/ 
+los archivos de precios de bolsa nacional en formato xls a la capa landing del datalake, en tanto la información
+está en multiples archivos.
+
 Los años 2017 y 2018 están en formato .xls, para los demás años se trae en formato .xlsx
 
 
 """
-
-# pip install wget
-
+import os  
 
 def ingest_data():
 

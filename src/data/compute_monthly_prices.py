@@ -1,17 +1,19 @@
+"""
+
+Esta función crea el archivo data_lake/business/precios-mensuales.csv que computa el promedio mensual 
+de los precios en cada uno de los meses contenidos en data_lake/cleansed/precios-horarios.csv
+
+Verifica que el archivo resultado contenga los campos con formato:
+
+* fecha: fecha en formato YYYY-MM-DD
+* precio: valor
+
+Verifica que el promedio se efectúe correctamente tomando un mes aleatorio y lo cojeta buscandolo el en archivo resultado:
+
+"""
+
 def compute_monthly_prices():
-    """
-    
-    Esta función crea el archivo data_lake/business/precios-mensuales.csv que computa el promedio mensual 
-    de los precios en cada uno de los meses contenidos en data_lake/cleansed/precios-horarios.csv
-    
-    Verifica que el archivo resultado contenga los campos con formato:
-
-    * fecha: fecha en formato YYYY-MM-DD
-    * precio: valor
-
-    Verifica que el promedio se efectúe correctamente tomando un mes aleatorio y lo cojeta buscandolo el en archivo resultado:
-
-    """
+   
     import pandas as pd
 
     df = pd.read_csv(
@@ -53,6 +55,9 @@ def compute_monthly_prices():
     # raise NotImplementedError("Implementar esta función")
     # return
 
+def test_compute_monthly_prices():
+    assert os.path.isfile("data_lake/business/precios-mensuales.csv") is True
+    
 
 if __name__ == "__main__":
 

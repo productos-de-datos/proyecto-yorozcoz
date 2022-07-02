@@ -1,11 +1,15 @@
+"""
+Dado que los archivos tienen extensiones diferentes, este módulo los homogeniza 
+al reubicarlos en la carpeta datalake/raw en formato csv.
+
+También verifica:
+* Que los archivos estén en formato csv
+* Que cada archivo CSV tiene como columnas la fecha en formato YYYY-MM-DD y las horas H00, ..., H23.
+
+"""
+
 def transform_data():
-    """
-    Esta función transforma las extensiones de los archivos ubicados en la carpeta data_lake/landing
-    para reubicarlos en la carpeta datalake/raw en formato csv.
 
-    Verifica que cada archivo CSV tiene como columnas la fecha en formato YYYY-MM-DD y las horas H00, ..., H23.
-
-    """
     import pandas as pd
 
     def transformar_xls_a_csv(year, encabezado, extension):
@@ -53,8 +57,16 @@ def transform_data():
             transformar_xls_a_csv(year, 2, "xls")
         else:
             transformar_xls_a_csv(year, 0, "xlsx")
+    
+    
     # return
     # raise NotImplementedError("Implementar esta función")
+
+def test_transform_data():
+  
+  dir_list = os.listdir("data_lake/raw/")
+  csv_list = glob.glob("data_lake/raw/*.csv")
+  assert len(csv_list) == len(dir_list)
 
 
 if __name__ == "__main__":

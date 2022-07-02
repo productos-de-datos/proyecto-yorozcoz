@@ -1,22 +1,24 @@
+"""
+
+Este módulo construye  los pronosticos con el modelo entrenado final.
+
+Esta función halla los pronósticos de precios diarios a partir de 
+las características definidas en data_lake/business/features/precios-diarios.csv
+aplicando Multi-layer perceptron regression de la librería SkLearn.
+
+El resultado del pronóstico se salva en data_lake/business/forecasts/precios-diarios.csv. 
+
+Verifica que el archivo resultado tenga:
+
+* La fecha en formato YYYY-MM-DD
+* El precio promedio real de la electricidad en formato número.
+* El pronóstico del precio promedio real en formato número.
+
+
+"""
+
 def make_forecasts():
-    """
-    
-    Construya los pronosticos con el modelo entrenado final.
 
-    Esta función halla los pronósticos de precios diarios a partir de 
-    las características definidas en data_lake/business/features/precios-diarios.csv
-    aplicando Multi-layer perceptron regression de la librería SkLearn.
-
-    El resultado del pronóstico se salva en data_lake/business/forecasts/precios-diarios.csv. 
-    
-    Este archivo contiene tres columnas:
-
-    * La fecha.
-    * El precio promedio real de la electricidad.
-    * El pronóstico del precio promedio real.
-
-
-    """
     import pandas as pd
     import matplotlib.pyplot as plt
     import pickle
@@ -93,6 +95,10 @@ def make_forecasts():
     daily_forecast.to_csv("data_lake/business/forecasts/precios-diarios.csv", index=True, header=True)
 
     #raise NotImplementedError("Implementar esta función")
+
+def test_make_forecasts():
+    assert os.path.isfile("data_lake/business/forecasts/precios-diarios.csv") is True
+
 
 if __name__ == "__main__":
     import doctest

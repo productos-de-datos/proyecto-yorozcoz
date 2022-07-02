@@ -1,29 +1,33 @@
+
+"""
+Este módulo contiene las funciones crea las carpetas del 'datalake' del proyecto 
+de acuerdo a la estructura necesaria para la fase de preprocesamiento de la información
+entes del entrenamiento y predicción del modelo.
+
+El data lake resultado contiene las siguientes subcarpetas :
+
+```
+.
+|
+\___ data_lake/
+    |___ landing/
+    |___ raw/
+    |___ cleansed/
+    \___ business/
+        |___ reports/
+        |    |___ figures/
+        |___ features/
+        |___ forecasts/
+
+```
+"""
+
 import os  
 
 def create_data_lake():
-    """
-    Esta función crea la carpeta `data_lake` en la raiz del proyecto. El data lake resultado contiene
-    las siguientes subcarpetas:
-
-    ```
-    .
-    |
-    \___ data_lake/
-         |___ landing/
-         |___ raw/
-         |___ cleansed/
-         \___ business/
-              |___ reports/
-              |    |___ figures/
-              |___ features/
-              |___ forecasts/
-
-    ```
-
-
-    """
     
     os.mkdir("./data_lake/")
+    
     parent_dir = "data_lake/"
     carpetas = ["landing", "raw", "cleansed", "business"]
     [os.mkdir(os.path.join(parent_dir, c)) for c in carpetas]

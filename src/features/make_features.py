@@ -1,17 +1,19 @@
+"""
+Prepara datos para pronóstico.
+
+Esta función crea el archivo data_lake/business/features/precios-diarios.csv
+que ha de contener una matriz de precios con 13 rezagos que usa la función 
+de entrenamiento de Regresión con Perceptrones Multicapa, a ser usada en la 
+fase de training.
+
+El archivo resultante contiene la fecha en la primera columna. 
+Las siguientes trece columnas contienen el valor de la fecha y de las doce fechas anteriores.
+
+
+"""
+
 def make_features():
-    """
-    Prepara datos para pronóstico.
 
-    Esta función crea el archivo data_lake/business/features/precios-diarios.csv
-    que ha de contener una matriz de precios con 13 rezagos que usa la función 
-    de entrenamiento de Regresión con Perceptrones Multicapa, a ser usada en la 
-    fase de training.
-
-    El archivo resultante contiene la fecha en la primera columna. 
-    Las siguientes trece columnas contienen el valor de la fecha y de las doce fechas anteriores.
-
-
-    """
     import pandas as pd
     import numpy as np
     from sklearn.preprocessing import MinMaxScaler
@@ -59,6 +61,10 @@ def make_features():
     make_features.to_csv("data_lake/business/features/precios_diarios.csv", index=None, header=True)
 
     # raise NotImplementedError("Implementar esta función")
+
+
+def test_make_features():
+    assert os.path.isfile("data_lake/business/features/precios_diarios.csv") is True
 
 
 if __name__ == "__main__":

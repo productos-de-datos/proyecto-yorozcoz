@@ -1,16 +1,19 @@
+"""
+
+Esta función limpia los datos y los combina en un mismo archivo 
+data_lake/cleansed/precios-horarios.csv que contiene toda la 
+información del 1997 a 2021.
+
+Verifica que las columnas de este archivo sean:
+
+* fecha: fecha en formato YYYY-MM-DD
+* hora: hora en formato HH
+* precio: precio de la electricidad en la bolsa nacional
+
+
+"""
+
 def clean_data():
-    """
-    Esta función limpia los datos y los combina en un mismo archivo 
-    data_lake/cleansed/precios-horarios.csv que contiene toda la 
-    información del 1997 a 2021.
- 
-    Verifica que las columnas de este archivo sean:
-
-    * fecha: fecha en formato YYYY-MM-DD
-    * hora: hora en formato HH
-    * precio: precio de la electricidad en la bolsa nacional
-
-    """
 
     import pandas as pd
     import glob
@@ -40,6 +43,9 @@ def clean_data():
     # raise NotImplementedError("Implementar esta función")
     # return
 
+
+def test_clean_data():
+    assert os.path.isfile("data_lake/cleansed/precios-horarios.csv") is True
 
 
 if __name__ == "__main__":

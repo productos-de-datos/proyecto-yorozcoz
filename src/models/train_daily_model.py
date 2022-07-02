@@ -5,7 +5,7 @@ def train_daily_model():
     las características definidas en data_lake/business/features/precios-diarios.csv
     aplicando Multi-layer perceptron regression de la librería SkLearn.
 
-    El resultado del entrenamiento se salva en models/precios-diarios.pkl
+    El objeto resultado del entrenamiento se salva en models/precios-diarios.pkl
 
     """
     import pandas as pd
@@ -85,6 +85,9 @@ def train_daily_model():
 
     
     #raise NotImplementedError("Implementar esta función")
+
+def test_train_daily_model():
+    assert os.path.isfile("src/models/precios-diarios.pkl") is True
 
 
 if __name__ == "__main__":
