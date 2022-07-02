@@ -10,7 +10,6 @@ def train_daily_model():
     import numpy as np
     from sklearn.preprocessing import MinMaxScaler
     from sklearn.neural_network import MLPRegressor
-    import numpy as np
     import pickle
 
 
