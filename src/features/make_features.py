@@ -1,15 +1,15 @@
 def make_features():
-    """Prepara datos para pronóstico.
+    """
+    Prepara datos para pronóstico.
 
-    Cree el archivo data_lake/business/features/precios-diarios.csv. Este
-    archivo contiene la información para pronosticar los precios diarios de la
-    electricidad con base en los precios de los días pasados. Las columnas
-    correspoden a las variables explicativas del modelo, y debe incluir,
-    adicionalmente, la fecha del precio que se desea pronosticar y el precio
-    que se desea pronosticar (variable dependiente).
+    Esta función crea el archivo data_lake/business/features/precios-diarios.csv
+    que ha de contener una matriz de precios con 13 rezagos que usa la función 
+    de entrenamiento de Regresión con Perceptrones Multicapa, a ser usada en la 
+    fase de training.
 
-    En la carpeta notebooks/ cree los notebooks de jupyter necesarios para
-    analizar y determinar las variables explicativas del modelo.
+    El archivo resultante contiene la fecha en la primera columna. 
+    Las siguientes trece columnas contienen el valor de la fecha y de las doce fechas anteriores.
+
 
     """
     import pandas as pd

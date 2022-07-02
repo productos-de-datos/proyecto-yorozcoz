@@ -1,13 +1,18 @@
 def make_forecasts():
-    """Construya los pronosticos con el modelo entrenado final.
+    """
+    
+    Construya los pronosticos con el modelo entrenado final.
 
-    Cree el archivo data_lake/business/forecasts/precios-diarios.csv. Este
-    archivo contiene tres columnas:
+    Esta función halla los pronósticos de precios diarios a partir de 
+    las características definidas en data_lake/business/features/precios-diarios.csv
+    aplicando Multi-layer perceptron regression de la librería SkLearn.
+
+    El resultado del pronóstico se salva en data_lake/business/forecasts/precios-diarios.csv. 
+    
+    Este archivo contiene tres columnas:
 
     * La fecha.
-
     * El precio promedio real de la electricidad.
-
     * El pronóstico del precio promedio real.
 
 

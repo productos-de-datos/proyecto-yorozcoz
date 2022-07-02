@@ -1,5 +1,6 @@
 def make_daily_prices_plot():
-    """Crea un grafico de lines que representa los precios promedios diarios.
+    """
+    Esta función crea un grafico de lines que representa los precios promedios diarios.
 
     Usando el archivo data_lake/business/precios-diarios.csv, crea un grafico de
     lines que representa los precios promedios diarios.

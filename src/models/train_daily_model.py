@@ -1,9 +1,11 @@
 def train_daily_model():
-    """Entrena el modelo de pronóstico de precios diarios.
+    """
+    
+    Entrena el modelo de pronóstico de precios diarios a partir de 
+    las características definidas en data_lake/business/features/precios-diarios.csv
+    aplicando Multi-layer perceptron regression de la librería SkLearn.
 
-    Con las features entrene el modelo de pronóstico de precios diarios y
-    salvelo en models/precios-diarios.pkl
-
+    El resultado del entrenamiento se salva en models/precios-diarios.pkl
 
     """
     import pandas as pd

@@ -1,5 +1,6 @@
 def make_monthly_prices_plot():
-    """Crea un grafico de lines que representa los precios promedios mensuales.
+    """
+    Esta función crea un grafico de lines que representa los precios promedios mensuales.
 
     Usando el archivo data_lake/business/precios-mensuales.csv, crea un grafico de
     lines que representa los precios promedios mensuales.

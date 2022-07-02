@@ -1,13 +1,11 @@
 """
-Construya un pipeline de Luigi que:
+Este pipeline de Luigi:
 
-* Importe los datos xls
-* Transforme los datos xls a csv
-* Cree la tabla unica de precios horarios.
-* Calcule los precios promedios diarios
-* Calcule los precios promedios mensuales
-
-En luigi llame las funciones que ya creo.
+* Importa los datos xls
+* Transforma los datos xls a csv
+* Crea la tabla unica de precios horarios.
+* Calcula los precios promedios diarios
+* Calcula los precios promedios mensuales
 
 
 """
@@ -92,5 +90,4 @@ if __name__ == "__main__":
 
 if __name__ == "__main__":
     import doctest
-
     doctest.testmod()

@@ -1,10 +1,9 @@
 def transform_data():
-    """Transforme los archivos xls a csv.
+    """
+    Esta función transforma las extensiones de los archivos ubicados en la carpeta data_lake/landing
+    para reubicarlos en la carpeta datalake/raw en formato csv.
 
-    Transforme los archivos data_lake/landing/*.xls a data_lake/raw/*.csv. Hay
-    un archivo CSV por cada archivo XLS en la capa landing. Cada archivo CSV
-    tiene como columnas la fecha en formato YYYY-MM-DD y las horas H00, ...,
-    H23.
+    Verifica que cada archivo CSV tiene como columnas la fecha en formato YYYY-MM-DD y las horas H00, ..., H23.
 
     """
     import pandas as pd

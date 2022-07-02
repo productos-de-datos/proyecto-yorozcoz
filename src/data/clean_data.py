@@ -1,17 +1,17 @@
 def clean_data():
-    """Realice la limpieza y transformación de los archivos CSV.
-
-    Usando los archivos data_lake/raw/*.csv, cree el archivo data_lake/cleansed/precios-horarios.csv.
-    Las columnas de este archivo son:
+    """
+    Esta función limpia los datos y los combina en un mismo archivo 
+    data_lake/cleansed/precios-horarios.csv que contiene toda la 
+    información del 1997 a 2021.
+ 
+    Verifica que las columnas de este archivo sean:
 
     * fecha: fecha en formato YYYY-MM-DD
     * hora: hora en formato HH
     * precio: precio de la electricidad en la bolsa nacional
 
-    Este archivo contiene toda la información del 1997 a 2021.
-
-
     """
+
     import pandas as pd
     import glob
 
@@ -40,8 +40,6 @@ def clean_data():
     # raise NotImplementedError("Implementar esta función")
     # return
 
-
-# clean_data()
 
 
 if __name__ == "__main__":
