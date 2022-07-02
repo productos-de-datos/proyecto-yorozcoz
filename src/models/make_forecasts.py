@@ -85,7 +85,7 @@ def make_forecasts():
 
 
     daily_forecast= df.join(y_m1)
-    daily_forecast.to_csv("data_lake/business/forecasts/precios-diarios.csv", index=True, header=True,  encoding="utf-8")
+    daily_forecast.to_csv("data_lake/business/forecasts/precios-diarios.csv", index=True, header=True)
 
     #raise NotImplementedError("Implementar esta función")
 
