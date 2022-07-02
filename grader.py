@@ -7,6 +7,11 @@
 # test_03: doctest
 #
 
+"""
+Efectúa las comprobaciones de la existencia de archivos generados por las funciones solicitadas.
+
+"""
+
 import os
 import sys
 
