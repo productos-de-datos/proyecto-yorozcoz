@@ -9,6 +9,7 @@ Este pipeline de Luigi:
 
 
 """
+import os  
 import luigi
 from luigi import Task, LocalTarget
 
@@ -87,6 +88,11 @@ class computar_precio_mensual(Task):
 
 if __name__ == "__main__":
     luigi.run(["computar_precio_mensual", "--local-scheduler"])
+
+def test_pipeline():
+    assert os.path.isfile("data_lake/business/precios-diarios.csv") is True
+    assert os.path.isfile("data_lake/business/precios-mensuales.csv") is True
+
 
 if __name__ == "__main__":
     import doctest

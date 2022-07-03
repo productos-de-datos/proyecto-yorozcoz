@@ -7,7 +7,7 @@ También verifica:
 * Que cada archivo CSV tiene como columnas la fecha en formato YYYY-MM-DD y las horas H00, ..., H23.
 
 """
-
+import os  
 def transform_data():
 
     import pandas as pd
@@ -63,10 +63,10 @@ def transform_data():
     # raise NotImplementedError("Implementar esta función")
 
 def test_transform_data():
-  
+  import glob
   dir_list = os.listdir("data_lake/raw/")
   csv_list = glob.glob("data_lake/raw/*.csv")
-  assert len(csv_list) == len(dir_list)
+  assert len(csv_list) == len(dir_list) - len(glob.glob("data_lake/raw/*.txt"))
 
 
 if __name__ == "__main__":

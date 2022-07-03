@@ -12,7 +12,7 @@ Verifica que las columnas de este archivo sean:
 
 
 """
-
+import os  
 def clean_data():
 
     import pandas as pd

@@ -11,6 +11,7 @@ Verifica que el promedio se efectúe correctamente tomando un dia aleatorio y lo
 
 
 """
+import os  
 
 def compute_daily_prices():
     import pandas as pd

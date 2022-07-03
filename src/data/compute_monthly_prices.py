@@ -12,6 +12,7 @@ Verifica que el promedio se efectúe correctamente tomando un mes aleatorio y lo
 
 """
 
+import os  
 def compute_monthly_prices():
    
     import pandas as pd
